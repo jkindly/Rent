@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Rent.Models.Car>
+@{
+    ViewBag.Title = "Overview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    int actualMonth = DateTime.Now.Month;
+    string month;
+    if (actualMonth < 10) { month = "0" + actualMonth; } else { month = actualMonth.ToString(); }
+    int daysInActualMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+}
+
+<h2>Overview</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Pojazd</th>
+        @{
+            for (int i = 1; i <= daysInActualMonth; i++)
+            {
+                string day;
+                if (i < 10)
+                {
+                    day = "0" + i.ToString();
+                }
+                else
+                {
+                    day = i.ToString();
+                }
+                <th class="month-rotated">@day/@month</th>
+            }
+        }
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Brand @item.Model</td>
+                @{
+                    for (int i = 1; i <= daysInActualMonth; i++)
+                    {
+                        <td></td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
