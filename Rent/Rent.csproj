@@ -164,8 +164,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RentCarsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,30 +203,138 @@
     <Compile Include="Migrations\202001180010397_AddedForeignKeyNotNullRentIdToCarClass.designer.cs">
       <DependentUpon>202001180010397_AddedForeignKeyNotNullRentIdToCarClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001191843570_AddedCustomerClass.cs" />
+    <Compile Include="Migrations\202001191843570_AddedCustomerClass.designer.cs">
+      <DependentUpon>202001191843570_AddedCustomerClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001191851556_ChangeTypeOfPesel.cs" />
+    <Compile Include="Migrations\202001191851556_ChangeTypeOfPesel.designer.cs">
+      <DependentUpon>202001191851556_ChangeTypeOfPesel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001201802025_ChangedPostalCodeToString.cs" />
+    <Compile Include="Migrations\202001201802025_ChangedPostalCodeToString.designer.cs">
+      <DependentUpon>202001201802025_ChangedPostalCodeToString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001201813306_AddedCityToCustomer.cs" />
+    <Compile Include="Migrations\202001201813306_AddedCityToCustomer.designer.cs">
+      <DependentUpon>202001201813306_AddedCityToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001201833289_AddedHouseNumberToCustomer.cs" />
+    <Compile Include="Migrations\202001201833289_AddedHouseNumberToCustomer.designer.cs">
+      <DependentUpon>202001201833289_AddedHouseNumberToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001201853490_ChangedHouseNumberToFlatNumber.cs" />
+    <Compile Include="Migrations\202001201853490_ChangedHouseNumberToFlatNumber.designer.cs">
+      <DependentUpon>202001201853490_ChangedHouseNumberToFlatNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001201918415_AddedRegistrationNumberToCar.cs" />
+    <Compile Include="Migrations\202001201918415_AddedRegistrationNumberToCar.designer.cs">
+      <DependentUpon>202001201918415_AddedRegistrationNumberToCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001201919117_DefaultCarList.cs" />
+    <Compile Include="Migrations\202001201919117_DefaultCarList.designer.cs">
+      <DependentUpon>202001201919117_DefaultCarList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001201929203_DefaultCarList1.cs" />
+    <Compile Include="Migrations\202001201929203_DefaultCarList1.designer.cs">
+      <DependentUpon>202001201929203_DefaultCarList1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001201947001_ChangedClassNameToRentCar.cs" />
+    <Compile Include="Migrations\202001201947001_ChangedClassNameToRentCar.designer.cs">
+      <DependentUpon>202001201947001_ChangedClassNameToRentCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001211028320_AddedCarAndCustomerToRentCarModel.cs" />
+    <Compile Include="Migrations\202001211028320_AddedCarAndCustomerToRentCarModel.designer.cs">
+      <DependentUpon>202001211028320_AddedCarAndCustomerToRentCarModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001211051163_AddedFullNameToCustomer.cs" />
+    <Compile Include="Migrations\202001211051163_AddedFullNameToCustomer.designer.cs">
+      <DependentUpon>202001211051163_AddedFullNameToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001212016158_AddedRequiredToNewRentCarViewModel.cs" />
+    <Compile Include="Migrations\202001212016158_AddedRequiredToNewRentCarViewModel.designer.cs">
+      <DependentUpon>202001212016158_AddedRequiredToNewRentCarViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001242106049_RequiredCarAndCustomerInRentCar.cs" />
+    <Compile Include="Migrations\202001242106049_RequiredCarAndCustomerInRentCar.designer.cs">
+      <DependentUpon>202001242106049_RequiredCarAndCustomerInRentCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001242211574_AddedRequiredToCustomerIdAndCarIdToRentCar.cs" />
+    <Compile Include="Migrations\202001242211574_AddedRequiredToCustomerIdAndCarIdToRentCar.designer.cs">
+      <DependentUpon>202001242211574_AddedRequiredToCustomerIdAndCarIdToRentCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Rent.cs" />
+    <Compile Include="Models\RentCar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewRentCarViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-simplex.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\jquery.datetimepicker.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -247,7 +357,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -275,10 +384,19 @@
     <Content Include="Views\Car\Edit.cshtml" />
     <Content Include="Views\Car\Index.cshtml" />
     <Content Include="Views\Car\Overview.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\RentCars\Create.cshtml" />
+    <Content Include="Views\RentCars\Delete.cshtml" />
+    <Content Include="Views\RentCars\Details.cshtml" />
+    <Content Include="Views\RentCars\Edit.cshtml" />
+    <Content Include="Views\RentCars\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -311,6 +429,51 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001180010397_AddedForeignKeyNotNullRentIdToCarClass.resx">
       <DependentUpon>202001180010397_AddedForeignKeyNotNullRentIdToCarClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191843570_AddedCustomerClass.resx">
+      <DependentUpon>202001191843570_AddedCustomerClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191851556_ChangeTypeOfPesel.resx">
+      <DependentUpon>202001191851556_ChangeTypeOfPesel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001201802025_ChangedPostalCodeToString.resx">
+      <DependentUpon>202001201802025_ChangedPostalCodeToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001201813306_AddedCityToCustomer.resx">
+      <DependentUpon>202001201813306_AddedCityToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001201833289_AddedHouseNumberToCustomer.resx">
+      <DependentUpon>202001201833289_AddedHouseNumberToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001201853490_ChangedHouseNumberToFlatNumber.resx">
+      <DependentUpon>202001201853490_ChangedHouseNumberToFlatNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001201918415_AddedRegistrationNumberToCar.resx">
+      <DependentUpon>202001201918415_AddedRegistrationNumberToCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001201919117_DefaultCarList.resx">
+      <DependentUpon>202001201919117_DefaultCarList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001201929203_DefaultCarList1.resx">
+      <DependentUpon>202001201929203_DefaultCarList1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001201947001_ChangedClassNameToRentCar.resx">
+      <DependentUpon>202001201947001_ChangedClassNameToRentCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001211028320_AddedCarAndCustomerToRentCarModel.resx">
+      <DependentUpon>202001211028320_AddedCarAndCustomerToRentCarModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001211051163_AddedFullNameToCustomer.resx">
+      <DependentUpon>202001211051163_AddedFullNameToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001212016158_AddedRequiredToNewRentCarViewModel.resx">
+      <DependentUpon>202001212016158_AddedRequiredToNewRentCarViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001242106049_RequiredCarAndCustomerInRentCar.resx">
+      <DependentUpon>202001242106049_RequiredCarAndCustomerInRentCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001242211574_AddedRequiredToCustomerIdAndCarIdToRentCar.resx">
+      <DependentUpon>202001242211574_AddedRequiredToCustomerIdAndCarIdToRentCar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

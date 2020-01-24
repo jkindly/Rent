@@ -84,7 +84,7 @@ namespace Rent.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Brand,Model,Segment,ProductionYear,FuelType,VIN,Odometer,IsRent")] Car car)
+        public ActionResult Edit([Bind(Include = "Id,RegistrationNumber,Brand,Model,Segment,ProductionYear,FuelType,VIN,Odometer,IsRent")] Car car)
         {
             if (ModelState.IsValid)
             {
@@ -121,12 +121,19 @@ namespace Rent.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public ActionResult NewRent()
+        {
+            return RedirectToAction("Create", "RentCars");
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
                 db.Dispose();
             }
+
             base.Dispose(disposing);
         }
     }

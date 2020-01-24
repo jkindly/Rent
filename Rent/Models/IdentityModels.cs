@@ -21,7 +21,8 @@ namespace Rent.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Car> Cars { get; set; }
-        public DbSet<Rent> Rent { get; set; }
+        public DbSet<RentCar> RentCars { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
